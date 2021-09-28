@@ -1,4 +1,4 @@
-import { API } from "./firebase";
+import { API } from "./firebaseconfig";
 
 const requests = {
 	fetchTrending: `/trending/all/week?api_key=${API}`,
