@@ -3,6 +3,12 @@
   height: 448px;
   color: #fff;
   object-fit: contain;
+  background-image: linear-gradient(
+      to right,
+      rgba(1, 1, 1, 1),
+      rgba(0, 0, 0, 0)
+    ),
+    url("https://image.tmdb.org/t/p/original/gFZriCkpJYsApPZEF3jhxL4yLzG.jpg");
 }
 
 .banner__contents {
@@ -50,7 +56,19 @@
   background-image: linear-gradient(
     180deg,
     transparent,
+    rgba(37, 37, 37, 0.3),
     rgba(37, 37, 37, 0.61),
     #111
   );
+}
+
+@media (max-width: 500px) {
+  .banner__contents {
+    padding-top: 210px;
+    height: 210px;
+  }
+  .banner__fadebottom {
+    position: relative;
+    bottom: 90px;
+  }
 }

@@ -1,20 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import axios from "../axios.js"
-import requests from "../request"
+import React from 'react';
 import './Banner.css'
 
-function Banner(props) {
-	const [movie, setMovie] = useState({})
-	const fetchData = async () => {
-		const response = await axios.get(requests.fetchNetflixOriginals)
-		const randomNumber = Math.floor(Math.random() * response.data.results.length - 1)
-		setMovie(response.data.results[randomNumber])
-		return response
-	}
-	useEffect(() => {
-		fetchData()
-	}, [])
-
+function Banner({ movie }) {
 	const truncate = (str, n) => {
 		return str?.length > n ? str.substr(0, n - 1) + "..." : str
 	}
@@ -22,12 +9,9 @@ function Banner(props) {
 	return (
 		<div className="banner" style={{
 			backgroundSize: "cover",
-			backgroundImage: `url('https://image.tmdb.org/t/p/original/${movie?.backdrop_path}')`,
+			backgroundImage: `linear-gradient(to right,rgba(1, 1, 1, 1),rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0)),url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
 			backgroundPosition: "center"
-
 		}}>
-
-
 			<div className="banner__contents">
 				<h1 className="banner__title">{movie?.name || movie?.title || movie?.original_name}</h1>
 				<div className="banner__buttons">
