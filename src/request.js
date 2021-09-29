@@ -9,7 +9,10 @@ const requests = {
 	fetchFantasyMovies: `/discover/movie?api_key=${API}&with_genres=14`,
 	fetchSiFiMovies: `/discover/movie?api_key=${API}&with_genres=878`,
 };
-
+// /tv/id
+export const BASE_URL_IMG = "https://image.tmdb.org/t/p/original/"
+export const recomendations = `/recommendations?api_key=${API}&language=en-US&page=1`
+export const movieSearch = `/search/multi?api_key=${API}&language=en-US&page=1&include_adult=true&query=`
 export const req_banner = {
 	"backdrop_path": "/gFZriCkpJYsApPZEF3jhxL4yLzG.jpg",
 	"first_air_date": "2017-05-02",

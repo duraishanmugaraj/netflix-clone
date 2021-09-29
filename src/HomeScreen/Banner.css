@@ -22,9 +22,6 @@
   padding-bottom: 0.3rem;
 }
 
-.banner__buttons {
-}
-
 .banner__button {
   cursor: pointer;
   color: #fff;
@@ -70,5 +67,8 @@
   .banner__fadebottom {
     position: relative;
     bottom: 90px;
+  }
+  .banner__title {
+    font-size: 24px;
   }
 }

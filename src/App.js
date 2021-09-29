@@ -18,6 +18,9 @@ function App() {
         </Switch>
       </Router>
     </div>
+    // <div className="app" id="app">
+    //   <HomeScreen />
+    // </div>
   );
 }
 
